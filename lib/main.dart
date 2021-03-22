@@ -11,6 +11,29 @@ void main() {
 
 @immutable
 class ExampleExpandableFab extends StatelessWidget {
+  static const _actionTitles = ['Create Post', 'Upload Photo', 'Upload Video'];
+
+  const ExampleExpandableFab({
+    Key? key,
+  }) : super(key: key);
+
+  void _showAction(BuildContext context, int index) {
+    showDialog<void>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          content: Text(_actionTitles[index]),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('CLOSE'),
+            )
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +51,16 @@ class ExampleExpandableFab extends StatelessWidget {
         distance: 112,
         children: [
           ActionButton(
+            onPressed: () => _showAction(context, 0),
             icon: const Icon(Icons.format_size),
+          ),
+          ActionButton(
+            onPressed: () => _showAction(context, 1),
+            icon: const Icon(Icons.insert_photo),
+          ),
+          ActionButton(
+            onPressed: () => _showAction(context, 2),
+            icon: const Icon(Icons.videocam),
           ),
         ],
       ),

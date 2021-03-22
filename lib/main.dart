@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: ExampleExpandableFab(),
       debugShowCheckedModeBanner: false,
     ),
@@ -13,6 +13,39 @@ void main() {
 class ExampleExpandableFab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Expandable Fab'),
+      ),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return FakeItem(
+            isBig: index.isOdd,
+          );
+        },
+      ),
+    );
+  }
+}
+
+@immutable
+class FakeItem extends StatelessWidget {
+  const FakeItem({
+    Key? key,
+    required this.isBig,
+  }) : super(key: key);
+
+  final bool isBig;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 24.0),
+      height: isBig ? 128.0 : 36.0,
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+        color: Colors.grey.shade300,
+      ),
+    );
   }
 }

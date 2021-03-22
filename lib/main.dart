@@ -29,6 +29,30 @@ class ExampleExpandableFab extends StatelessWidget {
 }
 
 @immutable
+class ExpandableFab extends StatefulWidget {
+  const ExpandableFab({
+    Key? key,
+    this.initialOpen,
+    required this.distance,
+    required this.children,
+  });
+
+  final bool? initialOpen;
+  final double distance;
+  final List<Widget> children;
+
+  @override
+  _ExpandableFabState createState() => _ExpandableFabState();
+}
+
+class _ExpandableFabState extends State<ExpandableFab> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+@immutable
 class FakeItem extends StatelessWidget {
   const FakeItem({
     Key? key,

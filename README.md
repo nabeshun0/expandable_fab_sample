@@ -1,16 +1,6 @@
 # expandable_fab_sample
 
-A new Flutter application.
+![2021-03-24 00-35-10 2021-03-24 00_35_38](https://user-images.githubusercontent.com/38596913/112173645-18adcd00-8c39-11eb-80e4-8a04cdbcb41c.gif)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Create an expandable FAB](https://flutter.dev/docs/cookbook/effects/expandable-fab)

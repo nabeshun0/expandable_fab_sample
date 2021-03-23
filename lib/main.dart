@@ -4,17 +4,18 @@ import 'dart:math' as math;
 void main() {
   runApp(
     MaterialApp(
-      home: ExampleExpandableFab(),
+      home: ExampleExpandableFabPage(),
       debugShowCheckedModeBanner: false,
     ),
   );
 }
 
+/// Page
 @immutable
-class ExampleExpandableFab extends StatelessWidget {
+class ExampleExpandableFabPage extends StatelessWidget {
   static const _actionTitles = ['Create Post', 'Upload Photo', 'Upload Video'];
 
-  const ExampleExpandableFab({
+  const ExampleExpandableFabPage({
     Key? key,
   }) : super(key: key);
 
@@ -69,6 +70,7 @@ class ExampleExpandableFab extends StatelessWidget {
   }
 }
 
+/// ExpandableFab
 @immutable
 class ExpandableFab extends StatefulWidget {
   const ExpandableFab({
@@ -211,6 +213,7 @@ class _ExpandableFabState extends State<ExpandableFab>
   }
 }
 
+/// _ExpandingActionButton
 class _ExpandingActionButton extends StatelessWidget {
   _ExpandingActionButton({
     Key? key,
@@ -251,6 +254,7 @@ class _ExpandingActionButton extends StatelessWidget {
   }
 }
 
+/// ActionButton
 @immutable
 class ActionButton extends StatelessWidget {
   const ActionButton({
@@ -281,6 +285,7 @@ class ActionButton extends StatelessWidget {
   }
 }
 
+/// FakeItem
 @immutable
 class FakeItem extends StatelessWidget {
   const FakeItem({
